@@ -11,4 +11,4 @@ Each project is self-contained and built using **HTML**, **CSS**, and **JavaScri
 |------------------------|----------------------------------------------|
 | [Currency Converter](./currency-converter/) | Convert between currencies using real exchange rate API |
 | [Money Tracker](./money-tracker/) | Add income/expenses and show current balance |
-| [Dark/Light Mode Toggle](./01-dark-light-mode/) | Simple webpage that switches between light and dark themes |
+| [Dark/Light Mode Toggle](./dark-light-mode/) | Simple webpage that switches between light and dark themes |
