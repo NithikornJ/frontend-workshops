@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+form input {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  background: #f0f0f0;
+}
+
+form button {
+  width: 40%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #11fa8d;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0fdb7a;
+}
+
+form button:active {
+  background-color: #0fdb7a;
+  transform: scale(0.98);
+}
+
+ul {
+  list-style-type: none;
+  /* ซ่อนสัญลักษณ์จุดนำหน้ารายการ */
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  padding: 0.5rem;
+  background-color: #f9f9f9; /* ✅ สีพื้นหลัง */
+  border-radius: 5px;        /* ✅ มุมโค้ง */
+  padding: 0.8rem;
+  transition: background 0.2s;
+  border-bottom: 1px solid #eee;
+  /* เส้นแบ่งระหว่างรายการ */
+  display: flex;
+  justify-content: space-between;
+  /* จัดเรียงให้มีระยะห่าง */
+  align-items: center;
+  /* จัดให้อยู่ในแนวเดียวกัน */
+  margin-bottom: 0.5rem;
+  /* ระยะห่างระหว่างรายการ */
+}
+li:hover {
+  background-color: #e6ffe6; /* ✅ เปลี่ยนสีเมื่อ hover */
+}
+
+li.completed {
+  text-decoration: line-through;
+  /* ขีดทับข้อความ */
+  color: #aaa;
+  /* เปลี่ยนสีข้อความ */
+  opacity: 0.6;
+  /* ✅ ทำให้จางลง */
+  transition: all 0.3s ease;
+  /* ✅ เพิ่มความนุ่มนวล */
+}
+
+li button {
+  background-color: #ff4d4d;
+  /* สีพื้นหลังของปุ่ม */
+  color: white;
+  /* สีข้อความในปุ่ม */
+  border: none;
+  /* ไม่มีกรอบ */
+  border-radius: 5px;
+  /* มุมโค้ง */
+  padding: 0.2rem 0.5rem;
+  /* ระยะห่างภายในปุ่ม */
+  cursor: pointer;
+  /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
