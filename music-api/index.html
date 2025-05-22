@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Music API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <h1>โปรแกรมเล่นเพลง (Music API)</h1>
+    <div class="music-container " id="music-container">
+        <div class="music-info">
+            <h4 class="title" id="title">ชื่อเพลง</h4>
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        <audio src="music/Mario.mp3" id="audio" controls hidden></audio>
+        <div class="img-container">
+            <img src="cover/Mario.jpg" alt="" id="cover">
+        </div>
+        <div class="navigation">
+            <button id="prev" class="nav-button">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="nav-button">
+                <i class="fas fa-play" id="play-icon"></i>
+            </button>
+            <button id="next" class="nav-button">
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

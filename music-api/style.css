@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+*{
+    box-sizing: border-box;   
+}
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(0deg, #185aad, #43cea2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh; /* เพิ่มบรรทัดนี้ */
+}
+.music-container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    display: flex;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+.img-container {
+    position: relative;
+    width: 100px;
+
+}.img-container img {
+    width: inherit;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 5s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.navigation button {
+    background: #fff;
+    border: none;
+    color: #dfdfdf;
+    font-size: 20px;    
+    padding: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.navigation button:focus {
+    outline: none;
+}
+.navigation button:active {
+    transform: scale(0.98);
+}
+.navigation button:hover {
+    color: #185aad;
+}
+.music-info {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 40px);
+    left: 20px;
+    transform: translateY(0%);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transition: transform 0.3s ease-in , opacity 0.3s;
+}
+.music-container.play .music-info {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+.music-info h4 {
+    margin: 0;
+}
+.progress-container {
+    width: 100%;
+    background-color: #fff;
+    height: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.progress {
+    background-color: red;
+    border-radius: 5px;
+    width: 0%;
+    height: 100%;
+    transition: width 0.1s linear;
+}
