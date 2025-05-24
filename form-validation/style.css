@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+body {
+    
+    display: flex;
+    justify-content: center;
+    background-color: #e5e5e5;
+}
+h2{
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+    padding: 10px 30px 30px 30px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+    margin: 0;
+}
+form label{
+    font-size: 20px;
+    margin: 15px 0 0 0;
+    font-weight: 500;
+    color: #777;
+}
+form input{
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form input:focus{
+    outline: none;
+    border-color: #007BFF;
+}
+form button{
+    padding: 20px;
+    font-size: 18px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+form button:hover{
+    background-color: #0056b3;
+}
+form button:active{
+    background-color: #004085;
+    transform: scale(0.98);
+}
+.form-group.error input{
+    border: 2px solid red;
+}
+.form-group.success input{
+    border: 2px solid green;
+}
+.form-group span{
+    color: red;
+    font-size: 14px;
+    visibility: hidden;
+}
+.form-group.error span{
+    visibility: visible;
+}

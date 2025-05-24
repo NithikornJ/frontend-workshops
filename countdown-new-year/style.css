@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://images.unsplash.com/photo-1535408913330-a71d0a3e29ba?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG5ld3llYXJ8ZW58MHx8MHx8fDA%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+body::after{
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+body *{
+    z-index: 1;
+}
+h1{
+    font-size: 60px;
+    margin: -80px 0 40px;
+}
+.countdown{
+    display: flex;
+    transform: scale(2);
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.time h2{
+    margin: 0 0 5px;
+}
+@media (max-width: 500px){
+    h1{
+        font-size: 30px;
+    }
+    .time{
+        margin: 5px;
+    }
+    .time h2{
+        font-size: 12px;
+    }
+    .time small{
+        font-size: 10px;
+    }
+} 
+    
